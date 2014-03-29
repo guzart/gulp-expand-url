@@ -6,7 +6,7 @@ var lodash  = require('lodash');
 var path    = require('path');
 
 var templateUrlRegExp = /templateUrl\:[^\'\"]*(?:\'|\")([^\'\"]+)(?:\'|\")/g;
-var imgSrcRegExp = /<img[^>]*?(?:src=)(?:\'|\")([^\'\"])+/g;
+var imgSrcRegExp = /<img[^>]*?(?:src=)(?:\'|\")([^\'\"]+)/g;
 
 function expandUrlPlugin(options) {
 
