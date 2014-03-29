@@ -1,0 +1,31 @@
+{
+  "name": "gulp-expand-url",
+  "version": "0.0.1",
+  "description": "Expands a url inside a file using the file relative path.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guzart/gulp-expand-url.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "replace",
+    "expand",
+    "url",
+    "expandurl"
+  ],
+  "author": {
+    "name": "Arturo Guzman"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzart/gulp-expand-url/issues"
+  },
+  "homepage": "https://github.com/guzart/gulp-expand-url",
+  "dependencies": {
+    "through2": "^0.4.1",
+    "lodash": "^2.4.1",
+    "gulp-util": "^2.2.14"
+  },
+  "readmeFilename": "README.md"
+}
