@@ -9,7 +9,7 @@ Expands a url inside a file using the file relative path.
     var expandUrl = require('gulp-expand-url');
 
     gulp.task('templates', function () {
-      gulp.src('src/**/*.tpl.html')
+      gulp.src('src/my-module/input.tpl.html')
         .pipe(expandUrl({ type: 'imgSrc', root: 'images' }))
         .pipe(gulp.dest('dist'));
     });
