@@ -1,6 +1,6 @@
 {
   "name": "gulp-expand-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Expands a url inside a file using the file relative path.",
   "main": "index.js",
   "repository": {
