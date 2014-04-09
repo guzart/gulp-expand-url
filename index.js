@@ -7,12 +7,17 @@ var path    = require('path');
 
 var templateUrlRegExp = /templateUrl\:[^\'\"]*(?:\'|\")([^\'\"]+)(?:\'|\")/g;
 var imgSrcRegExp = /<img[^>]*?(?:src=)(?:\'|\")([^\'\"]+)/g;
+var extRegExp = function (extension) {
+  var escapedExt = extension.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+  return new RegExp('(?:\'|")([^\'"]+' + escapedExt + ')(?:\'|")', 'g');
+};
 
 function expandUrlPlugin(options) {
 
   var opts = lodash.extend({
     root: '',
     type: null,
+    extension: '',
     regexp: null,
     sep: '/'
   }, options);
@@ -23,6 +28,9 @@ function expandUrlPlugin(options) {
       break;
     case 'imgSrc':
       opts.regexp = imgSrcRegExp;
+      break;
+    case 'extension':
+      opts.regexp = extRegExp(opts.extension);
       break;
   }
 

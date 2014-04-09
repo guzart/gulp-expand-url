@@ -37,10 +37,19 @@ be the first subexpression.
 
 Type: `string`  
 Default: `''`  
-Available: `['templateUrl', 'imgSrc']`  
+Available: `['templateUrl', 'imgSrc', 'extension']`  
 _optional_
 
 Predefined regular expressions.
+
+### option.extension
+
+Type: `string`  
+Default: `null`  
+_optional_
+
+This option is required if the `type` is `extension`, and it indicates the extension of the paths to expand.  
+e.g. if the value is `.tpl.html` then it expands from `'hello.tpl.html'` to  `'expanded/path/hello.tpl.html'`
 
 ### option.root
 
